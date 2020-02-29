@@ -1,7 +1,6 @@
-(function($) {
-  "use strict";
+const loginButton = document.getElementById("loginbtn");
 
-  jQuery(document).ready(function($) {
-    
-  });
-})(jQuery);
+loginButton.addEventListener("click",function(){
+  const loginArea = document.getElementById("login");
+  loginArea.style.display = "none";
+});
