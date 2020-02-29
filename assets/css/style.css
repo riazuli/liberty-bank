@@ -44,3 +44,7 @@ button:focus {
 }
 
 /* Main styles */
+
+.header-area{
+  padding: 50px 0px;
+}
