@@ -53,3 +53,31 @@ button:focus {
   padding: 50px 30px;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
 }
+.transation-area {
+  padding: 50px 0px;
+  display: none;
+}
+
+.card-block {
+  background-color: saddlebrown;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.card-block h5,
+.card-block h2 {
+  color: #fff;
+}
+
+.deposit {
+  background-color: darkolivegreen;
+}
+
+.withdraw {
+  background-color: cornflowerblue;
+}
+
+.balance {
+  background-color: indigo;
+}
