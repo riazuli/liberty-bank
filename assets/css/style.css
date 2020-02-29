@@ -81,3 +81,9 @@ button:focus {
 .balance {
   background-color: indigo;
 }
+.shadow-card-block {
+  padding: 40px 30px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
