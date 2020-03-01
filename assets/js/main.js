@@ -10,6 +10,7 @@ loginButton.addEventListener("click", function () {
 });
 
 
+// Amount Calculator function
 function spanTextChange(id, depositAmountNumber) {
   const current = document.getElementById(id).innerText;
   const currentNumber = parseFloat(current);
@@ -17,15 +18,22 @@ function spanTextChange(id, depositAmountNumber) {
   document.getElementById(id).innerText = totalAmount;
 }
 
+// Input text to number function
+function inputTextToNumber(id){
+  const amount = document.getElementById(id).value;
+  const amountNumber = parseFloat(amount);
+  return amountNumber;
+}
+
+
 // Deposit Event
 const depositButton = document.getElementById("depositButton");
 
 depositButton.addEventListener("click", function () {
-  const depositAmount = document.getElementById("depositAmount").value;
-  const depositAmountNumber = parseFloat(depositAmount);
 
-  spanTextChange("depositText", depositAmountNumber);
-  spanTextChange("currentBalance", depositAmountNumber);
+  const depositMoney = inputTextToNumber("depositAmount");
+  spanTextChange("depositText", depositMoney);
+  spanTextChange("currentBalance", depositMoney);
 
 
   document.getElementById("depositAmount").value = "";
