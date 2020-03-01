@@ -19,7 +19,7 @@ function spanTextChange(id, depositAmountNumber) {
 }
 
 // Input text to number function
-function inputTextToNumber(id){
+function inputTextToNumber(id) {
   const amount = document.getElementById(id).value;
   const amountNumber = parseFloat(amount);
   return amountNumber;
@@ -44,7 +44,10 @@ depositButton.addEventListener("click", function () {
 // withdraw Event
 const withdrawButton = document.getElementById("withdrawButton");
 
-withdrawButton.addEventListener("click",function(){
+withdrawButton.addEventListener("click", function () {
   const withdrawMoney = inputTextToNumber("withdrawAmount");
   spanTextChange("withdrawText", withdrawMoney);
+  spanTextChange("currentBalance", -1 * withdrawMoney);
+
+  document.getElementById("withdrawAmount").value = "";
 });
