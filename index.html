@@ -57,8 +57,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card-block balance">
-                        <h5>Balnce</h5>
-                        <h2>$1400</h2>
+                        <h5>Balance</h5>
+                        <h2>$ <span id="currentBalance">1400</span></h2>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,8 @@
                     <div class="shadow-card-block">
                         <h5>Deposit</h5>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="depositAmount" placeholder="$ amount you want to deposit">
+                            <input type="number" class="form-control" id="depositAmount"
+                                placeholder="$ amount you want to deposit">
                         </div>
                         <button id="depositButton" class="btn btn-primary">Deposit</button>
                     </div>
@@ -76,7 +77,8 @@
                     <div class="shadow-card-block">
                         <h5>Withdraw</h5>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="withdrawAmount" placeholder="$ amount you want to withdraw">
+                            <input type="number" class="form-control" id="withdrawAmount"
+                                placeholder="$ amount you want to withdraw">
                         </div>
                         <button id="withdrawButton" class="btn btn-primary">Withdraw</button>
                     </div>

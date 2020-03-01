@@ -9,15 +9,24 @@ loginButton.addEventListener("click", function () {
 
 });
 
+
+function spanTextChange(id, depositAmountNumber) {
+  const current = document.getElementById(id).innerText;
+  const currentNumber = parseFloat(current);
+  const totalAmount = currentNumber + depositAmountNumber;
+  document.getElementById(id).innerText = totalAmount;
+}
+
 // Deposit Event
 const depositButton = document.getElementById("depositButton");
+
 depositButton.addEventListener("click", function () {
   const depositAmount = document.getElementById("depositAmount").value;
   const depositAmountNumber = parseFloat(depositAmount);
 
-  const depositText = document.getElementById("depositText").innerText;
-  const depositTextNumber = parseFloat(depositText); 
-  const totalDepositAmount = depositAmountNumber + depositTextNumber;
-  document.getElementById("depositText").innerText = totalDepositAmount;
+  spanTextChange("depositText", depositAmountNumber);
+  spanTextChange("currentBalance", depositAmountNumber);
+
+
   document.getElementById("depositAmount").value = "";
 });
