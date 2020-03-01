@@ -38,3 +38,13 @@ depositButton.addEventListener("click", function () {
 
   document.getElementById("depositAmount").value = "";
 });
+
+
+
+// withdraw Event
+const withdrawButton = document.getElementById("withdrawButton");
+
+withdrawButton.addEventListener("click",function(){
+  const withdrawMoney = inputTextToNumber("withdrawAmount");
+  spanTextChange("withdrawText", withdrawMoney);
+});
