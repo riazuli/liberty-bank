@@ -32,11 +32,17 @@ const depositButton = document.getElementById("depositButton");
 depositButton.addEventListener("click", function () {
 
   const depositMoney = inputTextToNumber("depositAmount");
-  spanTextChange("depositText", depositMoney);
-  spanTextChange("currentBalance", depositMoney);
+
+  if (depositMoney < 0) {
+    alert("Deposit cant be negative");
+  } else {
+
+    spanTextChange("depositText", depositMoney);
+    spanTextChange("currentBalance", depositMoney);
 
 
-  document.getElementById("depositAmount").value = "";
+    document.getElementById("depositAmount").value = "";
+  }
 });
 
 
